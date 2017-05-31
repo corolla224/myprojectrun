@@ -36,4 +36,13 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function form ()
+    {
+        return 'welcome to form';
+    }
+    public function poll ()
+    {
+        return 'welcome to POLL!!';
+    }
 }
