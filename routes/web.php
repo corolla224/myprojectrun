@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('lib', 'LibController');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,6 +26,7 @@ Route::get('movieview', 'MovieController@view');
 Route::get('song', 'Music\SongController@index');
 Route::get('radio', 'RadioController@index');
 Route::get('songplay', 'Music\SongController@play');
+Route::get('band', 'Music\SongController@band');
 // require Parameters
 Route::get('blog/{id}', function($id) {
     return "Welcome to Blog ID : " . $id;
